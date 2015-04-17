@@ -51,7 +51,6 @@ function get_page_content()
             break;
 
     }
-    $includeFile = htmlspecialchars($includeFile);
     require_once($includeFile);
 }
 
