@@ -1,0 +1,103 @@
+<style>
+    ul {
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    ul li img {
+        cursor: pointer;
+    }
+</style>
+<h1 class="blog-post-title">Wildlife Image Gallery</h1>
+
+<h2 class="blog-post-meta">April 1, 2015</h2>
+<p>This gallery uses CSS transistions to zoom in on an image when the mouse hovers on it.
+    Then it uses JQuery to create a modal popup of the full sized image. Click <a href="gallery-source">here</a>
+    to see the source code.
+</p>
+<ul class="gallery row thumbnails">
+    <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+        <img class="thumbnail img-responsive" src="pages/images/animals-bw-lg.jpg"/>
+    </li>
+
+    <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+        <img class="img-responsive thumbnail" src="pages/images/binocularmontage-lg.jpg"/>
+    </li>
+
+    <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+        <img class="img-responsive thumbnail" src="pages/images/bison-cowskulls-lg.jpg"/>
+    </li>
+
+    <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+        <img class="img-responsive thumbnail" src="pages/images/bobcat-lg.jpg"/>
+    </li>
+</ul>
+<ul class="gallery row thumbnails">
+    <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+        <img class="img-responsive thumbnail" src="pages/images/canadagoose-lg.jpg"/>
+    </li>
+
+    <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+        <img class="img-responsive thumbnail" src="pages/images/deer-lg.jpg"/>
+    </li>
+
+    <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+        <img class="img-responsive thumbnail" src="pages/images/duckcall-lg.jpg"/>
+    </li>
+
+    <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+        <img class="img-responsive thumbnail" src="pages/images/heron-color-lg.jpg"/>
+    </li>
+</ul>
+<ul class="gallery row thumbnails">
+    <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+        <img class="img-responsive thumbnail" src="pages/images/lovebirds-lg.jpg"/>
+    </li>
+
+    <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+        <img class="img-responsive thumbnail" src="pages/images/frog-bird-trout-lg.jpg"/>
+    </li>
+
+    <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+        <img class="img-responsive thumbnail" src="pages/images/grasshopper-lg.jpg"/>
+    </li>
+
+    <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+        <img class="img-responsive thumbnail" src="pages/images/heron-bw-lg.jpg"/>
+    </li>
+
+</ul>
+<ul class="gallery row thumbnails">
+    <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+        <img class="img-responsive thumbnail" src="pages/images/nuthatch-lg.jpg"/>
+    </li>
+
+    <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+        <img class="img-responsive thumbnail" src="pages/images/redfox-lg.jpg"/>
+    </li>
+
+    <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+        <img class="img-responsive thumbnail" src="pages/images/flea-lg.jpg"/>
+    </li>
+
+    <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+        <img class="img-responsive thumbnail" src="pages/images/moose-lg.jpg"/>
+    </li>
+</ul><!-- End row -->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+

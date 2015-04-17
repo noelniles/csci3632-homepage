@@ -1,0 +1,9 @@
+Options -Multiviews
+
+RewriteEngine On
+RewriteBase /home/me/public_html/csci3632-homepage
+
+# Specify search friendly URLs
+RewriteRule ^home$ /csci3632-homepage/index.php [L]
+RewriteRule ^quizzer-source$ /csci3632-homepage/index.php?page=quizzer-source [L]
+RewriteRule ^gallery-source$ /csci3632-homepage/index.php?page=gallery-source [L]
