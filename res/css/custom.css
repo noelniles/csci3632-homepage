@@ -204,3 +204,17 @@ h6, .h6 {
 .gallery li img:hover {
     transform: scale(1.2);
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+}
+#iframe-content {
+    position absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
