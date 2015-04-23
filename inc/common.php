@@ -59,10 +59,10 @@ function get_page_content()
  */
 function display_post_summary($dir)
 {
-
     if ($handle = opendir($dir)) {
         while (false !== ($entry = readdir($handle))) {
 
+        if (!preg_match("/\.(swp|jpg|png|java|c|py)*$/i", $entry, $matches)) {
             //Don't grab the root or parent directory files
             if ($entry != "." && $entry != "..") {
 
@@ -77,4 +77,11 @@ function display_post_summary($dir)
             }
         }
     }
+}
+}
+
+function getzip()
+{
+  $zip = isset($_POST["zipcode"]) ? $_POST["zipcode"]: 'blank';
+  echo $zip;
 }
