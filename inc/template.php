@@ -63,6 +63,7 @@
     <!--        </div>-->
     <div class="col-sm-9">
         <?php get_page_content(); ?>
+        <?php loadPages(PAGES); ?>
     </div>
 </div>
 </div><!-- End container -->

@@ -1,3 +1,4 @@
 # Ignore all jpegs and pngs
 *.png
 *.jpg
+*.swp

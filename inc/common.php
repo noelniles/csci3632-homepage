@@ -2,12 +2,14 @@
 error_reporting(-1);
 ini_set('display_errors', 'On');
 
+
 function tsl($path)
 {
     if (substr($path, strlen($path) - 1) != '/') {
         $path .= '/';
     }
 }
+
 
 function get_root_path()
 {
@@ -18,6 +20,7 @@ function get_root_path()
     return tsl(substr(__FILE__, 0, $pos2));
 }
 
+
 /**
  * Define some constants
  *
@@ -25,7 +28,9 @@ function get_root_path()
 define('ROOT', get_root_path());
 define('BOOTSTRAP', ROOT . 'res/css/bootstrap.css');
 define('CSS', ROOT . 'res/css/custom.css');
+define('JS', ROOT . 'res/js/');
 define('PAGES', ROOT . 'pages/');
+
 
 function get_page_content()
 {
@@ -54,6 +59,7 @@ function get_page_content()
     require_once($includeFile);
 }
 
+
 /**
  * @param $dir directory where the html files are stored
  */
@@ -67,21 +73,39 @@ function display_post_summary($dir)
             if ($entry != "." && $entry != "..") {
 
                 //Get the first 500 bytes of a file
-                $content = file_get_contents("$dir/" . "$entry");
+                if (file_exists("$dir/" . "$entry"))
+                    include("$dir/" . "$entry");
 
+                /*
                 if ($content === false) {
                     echo "<h1>Something is wrong!</h1>";
                 } else {
                     echo $content;
                 }
+                 */
             }
         }
     }
 }
 }
 
+function loadPages($pagesDir)
+{
+    $pagesDirContents = scandir($pagesDir);
+
+    foreach ($pagesDirContents as $possiblePage) {
+        if (!preg_match('/^\./', $possiblePage) &&
+            preg_match('/.+\.(php|html)/', $possiblePage)) {
+            $page = $possiblePage;
+            include("$pagesDir/$page");
+        }
+    }
+}
+
+
 function getzip()
 {
   $zip = isset($_POST["zipcode"]) ? $_POST["zipcode"]: 'blank';
   echo $zip;
 }
+
