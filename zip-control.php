@@ -1,11 +1,11 @@
 <?php
-$url = "https://maps.googleapis.com/maps/api/geocode/xml?address=";
 $zipcode = null;
 $apikey = 'AIzaSyAA1jB2iTaYTIAlKW3uNo5TTqHcyGOx9tc';
 $results = [];
 
 if(isset($_POST['zipcode'])){
   foreach ($_POST['zipcode'] as $zip) {
+    $url = "https://maps.googleapis.com/maps/api/geocode/xml?address=";
     $zipcode = urlencode($zip);
     $url .= $zipcode;
     $url .= '&key=' . $apikey;

@@ -2,7 +2,7 @@
 $method = 'POST';
 $action = ROOT.'bing-control.php';
 ?>
-
+<h2 class="page-header">Find a Route from Fort Street Mall</h2>
 <form id="bing-form" class="form-horizontal" method="<?php print $method;?>" action="<?php print $action; ?>">
 
 <div class="form-group">
